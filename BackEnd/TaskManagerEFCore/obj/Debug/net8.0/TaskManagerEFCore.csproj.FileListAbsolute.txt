@@ -1,0 +1,14 @@
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\bin\Debug\net8.0\TaskManagerEFCore.deps.json
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\bin\Debug\net8.0\TaskManagerEFCore.runtimeconfig.json
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\bin\Debug\net8.0\TaskManagerEFCore.dll
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\bin\Debug\net8.0\TaskManagerEFCore.pdb
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\obj\Debug\net8.0\TaskManagerEFCore.csproj.AssemblyReference.cache
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\obj\Debug\net8.0\TaskManagerEFCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\obj\Debug\net8.0\TaskManagerEFCore.AssemblyInfoInputs.cache
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\obj\Debug\net8.0\TaskManagerEFCore.AssemblyInfo.cs
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\obj\Debug\net8.0\TaskManagerEFCore.csproj.CoreCompileInputs.cache
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\obj\Debug\net8.0\TaskManagerEFCore.dll
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\obj\Debug\net8.0\refint\TaskManagerEFCore.dll
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\obj\Debug\net8.0\TaskManagerEFCore.pdb
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\obj\Debug\net8.0\TaskManagerEFCore.genruntimeconfig.cache
+C:\Users\sures\OneDrive\Desktop\SureshProjects\Task Manager Software\TaskManagerEFCore\obj\Debug\net8.0\ref\TaskManagerEFCore.dll

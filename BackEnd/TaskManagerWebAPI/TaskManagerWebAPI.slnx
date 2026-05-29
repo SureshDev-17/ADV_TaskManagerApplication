@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../TaskManagerEFCore/TaskManagerEFCore.csproj" />
+  <Project Path="TaskManagerWebAPI.csproj" />
+</Solution>
