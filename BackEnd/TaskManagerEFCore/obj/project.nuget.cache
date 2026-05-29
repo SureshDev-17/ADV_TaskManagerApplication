@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s5qWDEA/Tzk=",
+  "dgSpecHash": "OzQfHywf0g8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sures\\OneDrive\\Desktop\\SureshProjects\\Task Manager Software\\TaskManagerEFCore\\TaskManagerEFCore.csproj",
+  "projectFilePath": "C:\\Users\\sures\\OneDrive\\Desktop\\SureshProjects\\Task Manager Software\\BackEnd\\TaskManagerEFCore\\TaskManagerEFCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sures\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\sures\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
