@@ -32,6 +32,7 @@ const MyTasks = () => {
           );
 
         setTasks(response.data);
+        console.log(response.data);
 
       } catch (error) {
 

@@ -26,13 +26,41 @@ namespace TaskManagerWebAPI.Services
             return await _taskRepository.CreateTask(task); 
         }
 
-        public async Task<List<TaskItem>> GetAllTasks() 
-        { 
-            return await _taskRepository.GetAllTasks();
-        }
-        public async Task<List<TaskItem>> GetMyTasks(int userId)
+        public async Task<List<TaskResponseDTO>> GetAllTasks()
         {
-            return await _taskRepository.GetTasksByUserId(userId);
+            var tasks = await _taskRepository.GetAllTasks();
+
+            return tasks.Select(t => new TaskResponseDTO
+            {
+                Id = t.Id,
+                Title = t.Title,
+                Description = t.Description,
+                Priority = t.Priority,
+                Status = t.Status,
+                DueDate = t.DueDate,
+                IsUpdated = t.IsUpdated,
+                AssignedToUserId = t.AssignedToUserId,
+                AssignedToUser = t.AssignedToUser?.Name ?? ""
+            }).ToList();
+        }
+
+        public async Task<List<TaskResponseDTO>> GetMyTasks(int userId)
+        {
+            var tasks =
+                await _taskRepository.GetTasksByUserId(userId);
+
+            return tasks.Select(t => new TaskResponseDTO
+            {
+                Id = t.Id,
+                Title = t.Title,
+                Description = t.Description,
+                Priority = t.Priority,
+                Status = t.Status,
+                DueDate = t.DueDate,
+                IsUpdated = t.IsUpdated,
+                AssignedToUserId = t.AssignedToUserId,
+                AssignedToUser = t.AssignedToUser?.Name ?? ""
+            }).ToList();
         }
 
         public async Task<string> UpdateTask(int id, UpdateTaskDTO dto, string role)

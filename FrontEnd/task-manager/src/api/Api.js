@@ -3,7 +3,8 @@ import axios from "axios";
 const api = axios.create({
 
   baseURL:
-    "https://localhost:7048/api",
+    // "https://localhost:7048/api",
+    "https://hsd-taskmanager-api-g9hva3b9asbgg8hb.centralindia-01.azurewebsites.net/api",
 
   headers: {
     "Content-Type":

@@ -38,6 +38,7 @@ namespace TaskManagerEFCore.Repositories
         public async Task<List<TaskItem>> GetTasksByUserId(int userId)
         {
             return await _context.Tasks
+                 .Include(t => t.AssignedToUser)
                 .Where(t => t.AssignedToUserId == userId)
                 .ToListAsync();
         }
@@ -45,6 +46,7 @@ namespace TaskManagerEFCore.Repositories
         public async Task<TaskItem?> GetTaskById(int id)
         {
             return await _context.Tasks
+                 .Include(t => t.AssignedToUser)
                 .FirstOrDefaultAsync(t => t.Id == id);
         }
 

@@ -9,7 +9,7 @@ const TaskTable = ({
   return (
     <div className="overflow-x-auto bg-card border border-border/70 rounded-3xl shadow-card">
 
-      <table className="w-full text-primary min-w-[720px]">
+      <table className="w-full text-primary table-auto">
 
         <thead className="bg-surface border-b border-border/70 sticky top-0">
 
@@ -55,13 +55,13 @@ const TaskTable = ({
             >
 
               {/* TASK TITLE */}
-              <td className="px-4 py-4 font-medium text-sm md:text-base">
+              <td className="px-4 py-4 font-medium text-sm md:text-base whitespace-normal break-words">
                 {task.title}
               </td>
 
               {/* ASSIGNED USER */}
-              <td className="px-4 py-4 text-muted text-sm">
-                {task.assignedTo}
+              <td className="px-4 py-4 text-muted text-sm whitespace-normal break-words">
+                {task.assignedToUser}
               </td>
 
               {/* PRIORITY */}
@@ -137,7 +137,7 @@ const TaskTable = ({
 
                 <td className="px-4 py-4">
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
 
                     <button
                       type="button"

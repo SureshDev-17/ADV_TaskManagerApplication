@@ -7,9 +7,9 @@ namespace TaskManagerWebAPI.Services.Inerfaces
     {
         Task<TaskItem> CreateTask(CreateTaskDTO dto);
 
-        Task<List<TaskItem>> GetAllTasks();
+        Task<List<TaskResponseDTO>> GetAllTasks();
 
-        Task<List<TaskItem>> GetMyTasks(int userId);
+        Task<List<TaskResponseDTO>> GetMyTasks(int userId);
 
         Task<string> UpdateTask(int id, UpdateTaskDTO dto, string role);
 
