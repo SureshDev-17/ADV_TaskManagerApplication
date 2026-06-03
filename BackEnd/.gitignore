@@ -11,7 +11,22 @@ node_modules
 dist
 dist-ssr
 *.local
+# Visual Studio
+.vs/
 
+# Build folders
+bin/
+obj/
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
