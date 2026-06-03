@@ -3,7 +3,7 @@ import { UserPlus } from "lucide-react";
 import AdminLayout from "../layouts/AdminLayout";
 import Navbar from "../components/Navbar";
 import { theme } from "../theme/colors";
-import api from "../api/api";
+import api from "../services/api";
 import { AUTH_ENDPOINTS } from "../api/endpoints";
 
 const Users = () => {

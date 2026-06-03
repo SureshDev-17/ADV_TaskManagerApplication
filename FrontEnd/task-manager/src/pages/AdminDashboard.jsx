@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 // API
-import api from "../api/api";
+import api from "../services/api";
 
 import {
   TASK_ENDPOINTS,

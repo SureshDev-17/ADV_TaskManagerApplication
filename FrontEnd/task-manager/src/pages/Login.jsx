@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { User } from "lucide-react";
 import { useState } from "react";
 
-import api from "../api/Api";
+import api from "../services/api";
 import { AUTH_ENDPOINTS } from "../api/endpoints";
 
 const Login = () => {

@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import DashboardCard from "../components/DashboardCard";
 import TaskTable from "../components/TaskTable";
 
-import api from "../api/api";
+import api from "../services/api";
 import { TASK_ENDPOINTS } from "../api/endpoints";
 
 import {

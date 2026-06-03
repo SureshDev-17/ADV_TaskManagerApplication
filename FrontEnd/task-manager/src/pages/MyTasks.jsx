@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import api from "../api/api";
+import api from "../services/api";
 import { TASK_ENDPOINTS } from "../api/endpoints";
 
 import UserLayout from "../layouts/UserLayout";

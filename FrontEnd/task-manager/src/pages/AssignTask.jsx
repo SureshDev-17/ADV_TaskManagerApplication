@@ -2,7 +2,7 @@ import AdminLayout from "../layouts/AdminLayout";
 import Navbar from "../components/Navbar";
 import { useState,useEffect } from "react";
 import { theme } from "../theme/colors";
-import api from "../api/api";
+import api from "../services/api";
 import { TASK_ENDPOINTS , AUTH_ENDPOINTS} from "../api/endpoints";
 
 const AssignTask = () => {
