@@ -64,12 +64,12 @@ const Navbar = ({ title }) => {
           <button className="bg-surface border border-border/70 p-3 rounded-2xl hover:bg-input transition-all duration-300 flex-shrink-0 shadow-sm">
             <Bell size={20} className="text-primary" />
           </button>
+           <div className="flex items-center gap-3 bg-surface border border-border/70 px-3 py-2 rounded-2xl flex-shrink-0 shadow-sm">
                     <div className="block md:hidden">
                       <h3 className="text-navbarText font-semibold text-sm">
                         {role === "Admin" ? "Admin" : userName || "User"}
                       </h3>
                     </div>
-                    <div className="flex items-center gap-3 bg-surface border border-border/70 px-3 py-2 rounded-2xl flex-shrink-0 shadow-sm">
                           <div className="hidden md:block">
                             <h3 className="text-navbarText font-semibold text-sm">
                               {role === "Admin" ? "Admin" : userName || "User"}
