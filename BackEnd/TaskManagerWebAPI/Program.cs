@@ -49,7 +49,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend",
         policy =>
         {
-            policy.AllowAnyOrigin()
+            policy.WithOrigins("https://taskmanager-application-two.vercel.app")
                   .AllowAnyMethod()
                   .AllowAnyHeader();
         });
