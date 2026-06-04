@@ -87,5 +87,16 @@ using (var scope = app.Services.CreateScope())
     await DbSeeder.SeedAdminAsync(context);
 }
 */
+try
+{
+    using var scope = app.Services.CreateScope();
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    await DbSeeder.SeedAdminAsync(context);
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
 
 app.Run();
