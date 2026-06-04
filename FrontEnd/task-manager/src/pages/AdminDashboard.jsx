@@ -73,9 +73,9 @@ const navigate = useNavigate();
   const handleDelete = async (taskId) => {
   try {
     await api.delete(
-      `${TASK_ENDPOINTS.deleteTask}/${taskId}`
+      TASK_ENDPOINTS.deleteTask(taskId)
     );
-
+    // console.log(taskId);
     setTasks((prev) =>
       prev.filter((task) => task.id !== taskId)
     );

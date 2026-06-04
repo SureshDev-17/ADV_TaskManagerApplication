@@ -58,10 +58,10 @@ const handleSubmit = async (e) => {
   try {
     if (editTask) {
       await api.put(
-        `${TASK_ENDPOINTS.updateTask}/${editTask.id}`,
+         TASK_ENDPOINTS.updateTask(editTask.id),
         form
       );
-
+      // console.log(editTask.id);
       alert("Task updated successfully");
     } else {
       await api.post(
