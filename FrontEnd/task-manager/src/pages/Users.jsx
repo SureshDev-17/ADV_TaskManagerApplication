@@ -93,8 +93,7 @@ const fetchUsers = async () => {
         </div>
 
         <div className="bg-input border border-border rounded-2xl p-4 mb-4 text-sm text-primary">
-          <p className="font-semibold text-muted">Static UI Only</p>
-          <p className="mt-1 text-muted">User creation form is displayed without backend interaction.</p>
+          <p className="font-semibold text-muted">Important! Admin Can only create Users</p>
         </div>
 
         <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5">

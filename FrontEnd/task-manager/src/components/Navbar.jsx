@@ -79,7 +79,7 @@ const Navbar = ({ title }) => {
                             </p>
                           </div>
                     </div>
-                    //above code is for mobile view user info, below code is for desktop view user info, both are kept to ensure user info is visible in all screen sizes without needing to open the menu on mobile
+                    {/* //above code is for mobile view user info, below code is for desktop view user info, both are kept to ensure user info is visible in all screen sizes without needing to open the menu on mobile */}
           {/* <div className="flex items-center gap-3 bg-surface border border-border/70 px-3 py-2 rounded-2xl flex-shrink-0 shadow-sm">
             <div className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">
               {role === "Admin" ? "A" : userName?.charAt(0).toUpperCase() || "U"}
