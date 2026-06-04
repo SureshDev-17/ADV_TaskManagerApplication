@@ -138,8 +138,12 @@ const TaskTable = ({
                 <td className="px-4 py-4">
 
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-
-                    <button
+                  <button onClick={() => onUpdateTask(task)}               
+                  className="px-3 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 text-white text-sm transition-all duration-300"
+>
+                          Edit
+                      </button>
+                    {/* <button
                       type="button"
                       onClick={() =>
                         onUpdateTask?.(task.id)
@@ -147,7 +151,7 @@ const TaskTable = ({
                       className="px-3 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 text-white text-sm transition-all duration-300"
                     >
                       Edit
-                    </button>
+                    </button> */}
 
                     <button
                       type="button"

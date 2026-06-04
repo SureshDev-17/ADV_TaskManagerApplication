@@ -21,8 +21,12 @@ import api from "../services/api";
 import {
   TASK_ENDPOINTS,
 } from "../api/endpoints";
+import { useNavigate } from "react-router-dom";
 
 const AdminDashboard = () => {
+  
+
+const navigate = useNavigate();
 
   // STATES
   const [tasks, setTasks] = useState([]);
@@ -59,13 +63,29 @@ const AdminDashboard = () => {
     fetchTasks();
 
   }, []);
-  const handleEdit =()=>{
-console.log("Clicked");
+
+
+  const handleEdit =(task)=>{
+    navigate('/assign-task', {state: {task}});
   }
-  const handleDelete=()=>{
-  console.log("Clicked");
-    
+
+
+  const handleDelete = async (taskId) => {
+  try {
+    await api.delete(
+      `${TASK_ENDPOINTS.deleteTask}/${taskId}`
+    );
+
+    setTasks((prev) =>
+      prev.filter((task) => task.id !== taskId)
+    );
+
+    alert("Task deleted successfully");
+  } catch (error) {
+    console.error(error);
+    alert("Delete failed");
   }
+};
 
   // STATS
   const total =
@@ -180,7 +200,9 @@ console.log("Clicked");
                   adminView={true}
                   onUpdateTask={handleEdit}
                   onDeleteTask={handleDelete}
+                  
 />
+
 
             </div>
           </>

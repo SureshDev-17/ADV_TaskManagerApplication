@@ -4,8 +4,12 @@ import { useState,useEffect } from "react";
 import { theme } from "../theme/colors";
 import api from "../services/api";
 import { TASK_ENDPOINTS , AUTH_ENDPOINTS} from "../api/endpoints";
+import { useLocation } from "react-router-dom";
 
 const AssignTask = () => {
+  const location = useLocation();
+
+  const editTask = location.state?.task;
   const [users, setUsers] = useState([]);
 
 const [form, setForm] = useState({
@@ -15,6 +19,21 @@ const [form, setForm] = useState({
   dueDate: "",
   assignedToUserId: "",
 });
+useEffect(() => {
+  if (editTask) {
+    setForm({
+      title: editTask.title || "",
+      description: editTask.description || "",
+      priority: editTask.priority || "Low",
+      dueDate: editTask.dueDate
+        ? editTask.dueDate.split("T")[0]
+        : "",
+      assignedToUserId:
+        editTask.assignedToUserId || "",
+    });
+  }
+}, [editTask]);
+
 useEffect(() => {
   fetchUsers();
 }, []);
@@ -35,10 +54,24 @@ const handleChange = (e) => {
 };
 const handleSubmit = async (e) => {
   e.preventDefault();
+
   try {
-    await api.post(TASK_ENDPOINTS.createTask, form);
-    console.log("Task created successfully");
-    // Clear form after submission
+    if (editTask) {
+      await api.put(
+        `${TASK_ENDPOINTS.updateTask}/${editTask.id}`,
+        form
+      );
+
+      alert("Task updated successfully");
+    } else {
+      await api.post(
+        TASK_ENDPOINTS.createTask,
+        form
+      );
+
+      alert("Task assigned successfully");
+    }
+
     setForm({
       title: "",
       description: "",
@@ -46,9 +79,10 @@ const handleSubmit = async (e) => {
       dueDate: "",
       assignedToUserId: "",
     });
+
   } catch (error) {
-    console.error("Failed to create task:", error);
-    alert("Failed to create task");
+    console.error(error);
+    alert("Operation failed");
   }
 };
   return (
@@ -57,7 +91,9 @@ const handleSubmit = async (e) => {
 
       <div className="bg-card border border-border rounded-3xl p-6 md:p-8 max-w-4xl shadow-card">
         <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary">Create New Task</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-primary">
+            {editTask ? "Update Task" : "Create Task"}
+          </h2>
           <p className="text-muted text-sm md:text-base mt-2">Assign tasks to users and track progress</p>
         </div>
 
@@ -149,7 +185,7 @@ const handleSubmit = async (e) => {
             onClick={handleSubmit}
             className="w-full md:w-auto rounded-2xl bg-button text-buttonText px-6 md:px-8 py-3 font-semibold text-sm md:text-base hover:bg-buttonHover shadow-sm transition-all duration-300"
           >
-            Assign Task
+            {editTask ? "Update Task" : "Assign Task"}
           </button>
         </div>
       </div>
