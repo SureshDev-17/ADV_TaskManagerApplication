@@ -89,7 +89,7 @@ const handleSubmit = async (e) => {
     <AdminLayout>
       <Navbar title="Assign Task" />
 
-      <div className="bg-card border border-border rounded-3xl p-6 md:p-8 max-w-4xl shadow-card">
+      <div className="bg-card border border-border rounded-3xl p-6 md:p-8 w-full max-w-none shadow-card">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-primary">
             {editTask ? "Update Task" : "Create Task"}
@@ -98,7 +98,7 @@ const handleSubmit = async (e) => {
         </div>
 
         <div className="bg-input border border-border rounded-2xl p-4 mb-6 text-sm text-primary">
-          <p className="font-semibold text-muted">Static UI Only</p>
+          <p className="font-semibold text-muted">Important! Admin Can only create and update Tasks</p>
           <p className="mt-1 text-muted">Task assignment controls are displayed without submission or data updates.</p>
         </div>
 

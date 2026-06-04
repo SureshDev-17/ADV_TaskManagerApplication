@@ -60,7 +60,7 @@ const TaskTable = ({
               </td>
 
               {/* ASSIGNED USER */}
-              <td className="px-4 py-4 text-muted text-sm whitespace-normal break-words">
+              <td className="px-4 py-4 text-sm md:text-base font-semibold text-primary tracking-wide">
                 {task.assignedToUser}
               </td>
 

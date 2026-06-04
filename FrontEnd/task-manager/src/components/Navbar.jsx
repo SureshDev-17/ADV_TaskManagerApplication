@@ -64,8 +64,23 @@ const Navbar = ({ title }) => {
           <button className="bg-surface border border-border/70 p-3 rounded-2xl hover:bg-input transition-all duration-300 flex-shrink-0 shadow-sm">
             <Bell size={20} className="text-primary" />
           </button>
-
-          <div className="flex items-center gap-3 bg-surface border border-border/70 px-3 py-2 rounded-2xl flex-shrink-0 shadow-sm">
+                    <div className="block md:hidden">
+                      <h3 className="text-navbarText font-semibold text-sm">
+                        {role === "Admin" ? "Admin" : userName || "User"}
+                      </h3>
+                    </div>
+                    <div className="flex items-center gap-3 bg-surface border border-border/70 px-3 py-2 rounded-2xl flex-shrink-0 shadow-sm">
+                          <div className="hidden md:block">
+                            <h3 className="text-navbarText font-semibold text-sm">
+                              {role === "Admin" ? "Admin" : userName || "User"}
+                            </h3>
+                            <p className="text-navbarText/70 text-xs">
+                              {role === "Admin" ? "Administrator" : "Employee"}
+                            </p>
+                          </div>
+                    </div>
+                    //above code is for mobile view user info, below code is for desktop view user info, both are kept to ensure user info is visible in all screen sizes without needing to open the menu on mobile
+          {/* <div className="flex items-center gap-3 bg-surface border border-border/70 px-3 py-2 rounded-2xl flex-shrink-0 shadow-sm">
             <div className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">
               {role === "Admin" ? "A" : userName?.charAt(0).toUpperCase() || "U"}
             </div>
@@ -73,7 +88,7 @@ const Navbar = ({ title }) => {
               <h3 className="text-navbarText font-semibold text-sm">{role === "Admin" ? "Admin" : userName || "User"}</h3>
               <p className="text-navbarText/70 text-xs">{role === "Admin" ? "Administrator" : "Employee"}</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

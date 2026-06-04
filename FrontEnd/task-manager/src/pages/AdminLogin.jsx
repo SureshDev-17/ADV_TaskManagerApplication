@@ -187,7 +187,7 @@ const AdminLogin = () => {
           </p>
 
           <Link
-            to="/login"
+            to="/"
 
             className="text-accent font-semibold hover:text-primary transition duration-300 text-sm md:text-base"
           >
